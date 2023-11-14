@@ -2,3 +2,14 @@ html {
   background: #f2f1f4;
   color: #19171c;
 }
+
+.title {
+  font-weight: bold;
+}
+
+.description {
+  display: none;
+}
+.active + .description {
+  display: block;
+}
