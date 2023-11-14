@@ -16,6 +16,7 @@ section3Element.addEventListener("click", toggle);
 
 function createFAQ(data) {
   const accordion = document.querySelector(".accordion");
+
   for (const post of data) {
     const titleElement = document.createElement("div");
     titleElement.className = "title section";
@@ -38,5 +39,4 @@ function createFAQ(data) {
 
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((response) => response.json())
-  .then((data) => createFAQ(data))
-  .catch((error) => console.error("Error fetching data:", error));
+  .then(createFAQ);
